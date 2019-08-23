@@ -1,0 +1,81 @@
+
+
+
+<ion-content  [scrollEvents]="true" >
+  <ion-grid class="grid" >
+ <ion-row >
+   <ion-col >
+     <ion-menu-button color="light"></ion-menu-button>
+   </ion-col>
+   <ion-col>
+  <ion-icon (click)="ScrollToTop()" src="../../assets/img/Icone.svg" class="icone"></ion-icon>
+</ion-col>
+</ion-row>
+<ion-row>
+  <ion-col >
+      <app-animated-like class="Like"></app-animated-like>
+  </ion-col > 
+</ion-row>
+<ion-row>
+  <ion-col>
+      <p class="nome">AGBAR TOWER,</p>
+  </ion-col>
+</ion-row>
+<ion-row>
+    <ion-col>
+        <p class="city">BARCELONA</p>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+        <p class="fotografo">-Photo By Angela Compagnone from Unsplash</p>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <ion-button class="butao1"></ion-button>
+    </ion-col>
+    <ion-col>
+      <ion-button class="butao" ></ion-button>
+  </ion-col>
+  <ion-col>
+   <ion-button class="butao"></ion-button>
+</ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <ion-button class="barra" (click)="ScrollToPoint()" ></ion-button>
+   </ion-col>
+  </ion-row>
+  </ion-grid>
+
+  <img src="../../assets/img/angela-compagnone-Vcp9fT8nCBE-unsplash.jpg" class="image">
+  <p class="fotografo2">-Photo By Angela Compagnone from Unsplash</p>
+  <p class="fotografo2">-Text From wikipedia, the free encyclopedia</p>
+
+
+  <ion-grid>
+      <ion-row >
+          <ion-col offset="2">
+          
+            <ion-icon name="heart" class="icone1"></ion-icon>
+              <ion-badge class="like">11</ion-badge>
+           
+       </ion-col>
+       <ion-col offset="2" >
+        <ion-icon name="share" class="icone2"></ion-icon>
+          <ion-badge class="share">20</ion-badge>
+         </ion-col>
+       </ion-row> 
+  </ion-grid>
+  
+  <p class="texto"> A Torre Glòries localiza-se na cidade de Barcelona, na Espanha.
+
+      Eleva-se a cerca de cento e quarenta e dois metros de altura. Na sua construção foram utilizados diversos materiais. Até ao piso 26, em que o edifício apresenta a forma de um cilindro, é essencialmente constituído por cimento e vidro. A partir do vigésimo sexto andar até à cúpula foram utilizados aço e vidro. A superfície do edifício é constituída por placas de alumínio coloridas.
+      
+      Esta torre, construída pelo arquitecto Jean Nouvel, pertence à Companhia das Águas de Barcelona.
+      
+      É o terceiro edifício mais alto da capital catalã, a seguir ao Hotel Arts e à Torre Mapfre.
+  </p>
+
+</ion-content>

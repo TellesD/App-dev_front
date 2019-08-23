@@ -1,0 +1,19 @@
+// App Styles
+// ----------------------------------------------------------------------------
+// Put style rules here that you want to apply to the entire application. These 
+// styles are for the entire app and not just one component. Additionally, this 
+// file can hold Sass mixins, functions, and placeholder classes to be imported 
+// and used throughout the application.
+
+.menx {
+    --background: linear-gradient(0deg, rgb(151,252,225) 25%, rgb(147,223,235) 50%, rgba(147,204,243) 75%, rgb(147,183,255) 100%) !important;
+    background-size: contain;
+
+}
+.itx{ 
+    color: aliceblue;
+    border-radius: 5px;
+   text-align: center;
+   font-size: 30px;
+   font-family: Arial;   
+}

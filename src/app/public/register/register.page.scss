@@ -1,0 +1,77 @@
+ion-content {
+    --background: linear-gradient(0deg, rgb(106,251,211) 25%, rgb(100,209,226) 50%, rgba(100,179,241) 75%, rgb(101,153,247) 100%) !important;
+    background-size: contain;
+
+}
+ion-toolbar {
+    --background: rgb(101,153,247);
+    --ion-color-base: transparent !important;
+    box-shadow: none  
+    
+  }
+.label{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+}
+.butao{
+--background: transparent;
+border: 1px solid white;
+width: 251px;
+height: 57px;
+
+padding-right: 10px;
+box-shadow: none;
+}
+.campos{
+    background-color: white;  
+     text-align: start;
+     width: 95%;
+     height: 28px;
+     border: solid 1px white;
+     color: #64b3f1;
+}
+.tabela{
+    margin-top: 200px;
+}
+.icone{
+    width: 82px;
+    height: 83px; 
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 80px;
+}
+.icone1{
+    width: 40px;
+    height: 30px;
+    padding-top: 10px;
+
+}
+.icone2{
+    padding-top: 10px;
+    height: 35px;
+
+
+}
+
+.texto{
+ color: aliceblue;
+ border-radius: 5px;
+height: 14px;
+}
+.borda{
+    border: 1px solid white;
+
+
+}
+.text{
+    color: azure;
+   text-align: center
+  
+    
+}
+.icon{
+    margin-top: 10px;
+    margin-right: 10px;
+    height: 50px;
+    width: 50px;
+  }

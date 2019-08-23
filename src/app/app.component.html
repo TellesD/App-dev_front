@@ -1,0 +1,16 @@
+<ion-app>
+  <ion-split-pane>
+    <ion-menu>
+      <ion-content class="menx">
+          <br><br><br> 
+          <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages">
+            <p class="itx"  [routerDirection]="'root'" [routerLink]="[p.url]">
+                {{p.title}}
+            </p>
+          </ion-menu-toggle>
+  
+      </ion-content>
+    </ion-menu>
+    <ion-router-outlet main></ion-router-outlet>
+  </ion-split-pane>
+</ion-app>
