@@ -33,6 +33,7 @@
     "cordova-plugin-camera": "4.0.3",
     "cordova-plugin-headercolor": "1.0.0",
     "cordova-plugin-telerik-imagepicker": "2.3.3",
+    "cordova-sqlite-storage": "^3.3.0",
     "core-js": "^2.5.4",
     "rxjs": "~6.5.1",
     "tslib": "^1.9.0",
@@ -84,7 +85,8 @@
         "ANDROID_SUPPORT_ANNOTATIONS_VERSION": "27.+"
       },
       "cordova-plugin-ionic-keyboard": {},
-      "cordova-plugin-telerik-imagepicker": {}
+      "cordova-plugin-telerik-imagepicker": {},
+      "cordova-sqlite-storage": {}
     },
     "platforms": [
       "android"

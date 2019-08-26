@@ -62,7 +62,7 @@ export class AppComponent {
     this.platform.ready().then(() => {
       this.statusBar.styleDefault();
       this.splashScreen.hide();
-      this.router.navigate(['day']);
+      this.router.navigate(['login']);
       });
 
     }

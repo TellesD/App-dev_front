@@ -30,6 +30,8 @@ const routes: Routes = [
   { path: 'day', loadChildren: './day/day.module#DayPageModule' },
   { path: 'about', loadChildren: './about/about.module#AboutPageModule' },
   { path: 'donate', loadChildren: './donate/donate.module#DonatePageModule' },
+  { path: 'login-modal', loadChildren: './login-modal/login-modal.module#LoginModalPageModule' },
+  { path: 'card-modal', loadChildren: './card-modal/card-modal.module#CardModalPageModule' },
 ];
 
 @NgModule({

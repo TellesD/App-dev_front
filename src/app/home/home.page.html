@@ -13,11 +13,11 @@
   
   <ion-searchbar showCancelButton="always " class="pesquisa"></ion-searchbar>
 
-  <ion-card *ngFor="let card of cards" class="card" >
+  <ion-card  *ngFor="let card of cards" class="card" >
     
-    <img src="../../assets/img/angela-compagnone-Vcp9fT8nCBE-unsplash.jpg" class="imagem">
+    <img (click)="openModal()" src="../../assets/img/angela-compagnone-Vcp9fT8nCBE-unsplash.jpg" class="imagem">
     
-       <ion-icon class="tabela" name="add-circle"></ion-icon>
+       <ion-icon (click)="openModal()" class="tabela" name="add-circle"></ion-icon>
    
     <ion-card-content class="cartao">
            <ion-grid>
@@ -42,7 +42,6 @@
            </ion-col>
            <ion-col offset="4" >
             <ion-icon name="share" class="icone2"></ion-icon>
-              <ion-badge class="share" >20</ion-badge>
              </ion-col>
            </ion-row>
            </ion-grid> 

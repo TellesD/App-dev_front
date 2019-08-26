@@ -12,6 +12,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { IonicStorageModule } from '@ionic/storage';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { LoginModalPageModule } from './login-modal/login-modal.module';
+import { CardModalPageModule } from './card-modal/card-modal.module';
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
@@ -19,7 +21,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BrowserModule,
     BrowserAnimationsModule,
     IonicModule.forRoot(),
-    AppRoutingModule,
+    AppRoutingModule, 
+    LoginModalPageModule,   
+    CardModalPageModule,
     HttpClientModule,
     IonicStorageModule.forRoot(),
     IonicStorageModule.forRoot()

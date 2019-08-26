@@ -1,0 +1,41 @@
+ion-content {
+    --background: url(../../assets/img/tela1.svg) no-repeat center/cover fixed ;
+    background-size: contain;
+
+}
+.button{
+--background: transparent;
+border: 1px solid white;
+width: 251px;
+height: 57px;
+font-size: 20px;
+color: white;
+margin-left: auto;
+margin-right: auto;
+box-shadow: none
+}
+
+.icone{
+    width: 120px;
+    height: 143px; 
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 101px;
+}
+
+.p{
+    width: 125px;
+   height: 35px; 
+    color: white;
+  
+  }
+  .p1{
+    width: 35px;
+   height: 35px; 
+    color: white;
+
+  }
+  .texto{
+      color: azure;
+     text-align: center;
+  }
