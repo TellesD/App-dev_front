@@ -7,7 +7,7 @@ ion-content {
 --background: transparent;
 border: 1px solid white;
 width: 251px;
-height: 57px;
+height: 30px;
 font-size: 20px;
 color: white;
 margin-left: auto;
@@ -39,3 +39,9 @@ box-shadow: none
       color: azure;
      text-align: center;
   }
+page-home {
+    .error{
+      color: #ff0000;
+      font-size: 12px;
+    }
+}

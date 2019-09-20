@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Observable, of} from 'rxjs';
+import { Observable, of, BehaviorSubject} from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { catchError,  tap } from 'rxjs/operators';
 import { CardModule } from '../module/card.module';
@@ -7,9 +7,12 @@ import { TagModule } from '../module/style.module';
 import { ArchModule } from '../module/arch.module';
 import { MaterialModule } from '../module/material.module';
 import { UserModule } from '../module/user.module';
+import { Platform } from '@ionic/angular';
 const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' })
 };
+
+ const TOKEN_KEY= 'auth-token';
 @Injectable({
   providedIn: 'root'
 })
@@ -17,16 +20,25 @@ const httpOptions = {
 
 export class Cardservice {
 
-  
+  authenticationState = new BehaviorSubject(false);
   
   constructor(
-    private http: HttpClient,
+    private http: HttpClient, private storage: Storage, private plt: Platform,
   ) {
-    
+    this.plt.ready().then(() => {
+      this.checkToken();
+    });
+  }
+  checkToken() {
+    this.storage.get(TOKEN_KEY).then(res => {
+      if (res) {
+        this.authenticationState.next(true);
+      }
+    })
   }
  //cards
 getCards (): Observable<CardModule[]> {
-  return this.http.get<CardModule[]>('http://192.168.0.114:3000/cards/showCard')
+  return this.http.get<CardModule[]>('http://192.168.0.114:3000/cards/showCard',)
     .pipe(
 
     );
@@ -79,7 +91,23 @@ putLikes (id:string): Observable<string> {
 addUser (user: UserModule): Observable<UserModule> {
   return this.http.post<UserModule>('http://192.168.0.114:3000/users/create', user, httpOptions).pipe(
   );
+
+
 }
+
+login (user: UserModule): Observable<UserModule> {
+ const token =  this.http.post<UserModule>('http://192.168.0.114:3000/users/auth', user, httpOptions);
+ return this.storage.set(TOKEN_KEY, token).then(() => {
+  this.authenticationState.next(true);
+});
+  
+  }
+  
+  logout() {
+    return this.storage.remove(TOKEN_KEY).then(() => {
+      this.authenticationState.next(false);
+    });
+  }
 
 
 
