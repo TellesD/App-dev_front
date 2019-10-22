@@ -12,7 +12,8 @@ const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' })
 };
 
- const TOKEN_KEY= 'auth-token';
+var TOKEN_KEY;
+ 
 @Injectable({
   providedIn: 'root'
 })
@@ -25,17 +26,9 @@ export class Cardservice {
   constructor(
     private http: HttpClient, private storage: Storage, private plt: Platform,
   ) {
-    this.plt.ready().then(() => {
-      this.checkToken();
-    });
+   
   }
-  checkToken() {
-    this.storage.get(TOKEN_KEY).then(res => {
-      if (res) {
-        this.authenticationState.next(true);
-      }
-    })
-  }
+
  //cards
 getCards (): Observable<CardModule[]> {
   return this.http.get<CardModule[]>('http://192.168.0.114:3000/cards/showCard',)
@@ -48,6 +41,13 @@ addCard (card: CardModule): Observable<CardModule> {
   return this.http.post<CardModule>('http://192.168.0.114:3000/cards/createCard', card, httpOptions).pipe(
   );
 }
+getFavCards (): Observable<CardModule[]> {
+  return this.http.get<CardModule[]>('http://192.168.0.114:3000/cards/showFavCard',)
+    .pipe(
+
+    );
+}
+
 //style
 getTags (): Observable<TagModule[]> {
   return this.http.get<TagModule[]>('http://192.168.0.114:3000/cards/showTags')
@@ -107,10 +107,21 @@ login (user: UserModule): Observable<UserModule> {
     return this.storage.remove(TOKEN_KEY).then(() => {
       this.authenticationState.next(false);
     });
+    
+    
   }
+  
+  isAuthenticated() {
+    return this.authenticationState.value;
+  }
+//day 
+getDay (): Observable<CardModule[]> {
+  return this.http.get<CardModule[]>('http://192.168.0.114:3000/cards/showCard',)
+    .pipe(
 
-
-
+    );
+}
+ 
 
 
 

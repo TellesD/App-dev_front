@@ -32,6 +32,7 @@ const routes: Routes = [
   { path: 'donate', loadChildren: './donate/donate.module#DonatePageModule' },
   { path: 'login-modal', loadChildren: './login-modal/login-modal.module#LoginModalPageModule' },
   { path: 'card-modal', loadChildren: './card-modal/card-modal.module#CardModalPageModule' },
+  { path: 'paypal', loadChildren: './paypal/paypal.module#PaypalPageModule' },
 ];
 
 @NgModule({

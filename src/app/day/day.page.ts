@@ -1,5 +1,7 @@
 import { Component,ViewChild, OnInit } from '@angular/core';
 import { NavController, IonContent} from '@ionic/angular';
+import { Cardservice } from '../services/cards.service';
+import {DayModule} from '../module/day.module';
 
 @Component({
   selector: 'app-day',
@@ -11,10 +13,12 @@ export class DayPage implements OnInit {
   dummyList:any;
  
  
-  constructor(private navCtrl: NavController) { }
+  constructor(private navCtrl: NavController, private cardservice: Cardservice) { }
+  cards: DayModule[];
+  
 
   ngOnInit() {
-   
+   this.getDay();
      
   }
   
@@ -27,5 +31,9 @@ export class DayPage implements OnInit {
   ScrollToTop(){
     this.content.scrollToTop();
   }
-  
+  getDay(): void {
+    this.cardservice.getDay()
+        .subscribe((cards) =>{ this.cards = cards; console.log(cards)} );
+      
+  }
 }

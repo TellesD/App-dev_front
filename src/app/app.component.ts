@@ -42,6 +42,11 @@ export class AppComponent {
       icon: 'add-circle'
     },
     {
+      title: 'paypal',
+      url: '/paypal',
+      icon: 'add-circle'
+    },
+    {
       title: 'LOGOUT',
       url: '/login',
       icon: 'exit'

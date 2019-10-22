@@ -2,8 +2,7 @@ import { Camera } from '@ionic-native/camera/ngx';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
-	
-import { ReactiveFormsModule } from '@angular/forms';
+    
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
@@ -15,6 +14,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { LoginModalPageModule } from './login-modal/login-modal.module';
 import { CardModalPageModule } from './card-modal/card-modal.module';
+import { ReactiveFormsModule } from '@angular/forms';
+import { PayPal } from '@ionic-native/paypal/ngx';
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
@@ -34,6 +35,7 @@ import { CardModalPageModule } from './card-modal/card-modal.module';
   providers: [
     StatusBar,
     SplashScreen,
+    PayPal,
     ImagePicker,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     Camera,
