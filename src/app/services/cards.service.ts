@@ -1,18 +1,18 @@
 import { Injectable } from '@angular/core';
-import { Observable, of, BehaviorSubject} from 'rxjs';
+import { Observable} from 'rxjs';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { catchError,  tap } from 'rxjs/operators';
 import { CardModule } from '../module/card.module';
 import { TagModule } from '../module/style.module';
 import { ArchModule } from '../module/arch.module';
 import { MaterialModule } from '../module/material.module';
 import { UserModule } from '../module/user.module';
 import { Platform } from '@ionic/angular';
+import { NativeStorage } from '@ionic-native/native-storage/ngx';
 const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' })
 };
 
-var TOKEN_KEY;
+
  
 @Injectable({
   providedIn: 'root'
@@ -21,10 +21,13 @@ var TOKEN_KEY;
 
 export class Cardservice {
 
-  authenticationState = new BehaviorSubject(false);
+ 
   
   constructor(
-    private http: HttpClient, private storage: Storage, private plt: Platform,
+    private http: HttpClient,
+  
+    private plt: Platform,
+    private nativeStorage: NativeStorage,
   ) {
    
   }
@@ -96,27 +99,14 @@ addUser (user: UserModule): Observable<UserModule> {
 }
 
 login (user: UserModule): Observable<UserModule> {
- const token =  this.http.post<UserModule>('http://192.168.0.114:3000/users/auth', user, httpOptions);
- return this.storage.set(TOKEN_KEY, token).then(() => {
-  this.authenticationState.next(true);
-});
+ return  this.http.post<UserModule>('http://192.168.0.114:3000/users/auth', user, httpOptions);
+ 
+
+};
   
-  }
-  
-  logout() {
-    return this.storage.remove(TOKEN_KEY).then(() => {
-      this.authenticationState.next(false);
-    });
-    
-    
-  }
-  
-  isAuthenticated() {
-    return this.authenticationState.value;
-  }
 //day 
 getDay (): Observable<CardModule[]> {
-  return this.http.get<CardModule[]>('http://192.168.0.114:3000/cards/showCard',)
+  return this.http.get<CardModule[]>('http://192.168.0.114:3000/cards/showDay',)
     .pipe(
 
     );

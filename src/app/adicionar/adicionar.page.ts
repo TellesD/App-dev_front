@@ -35,6 +35,7 @@ export class AdicionarPage implements OnInit {
     style: '',
     subjects: '',
     like:  '0',
+    status: 'unlike',
     id: '',
 
 };

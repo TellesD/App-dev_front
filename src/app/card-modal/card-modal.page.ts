@@ -11,5 +11,5 @@ export class CardModalPage implements OnInit {
 
   ngOnInit() {
   }
-
+  
 }

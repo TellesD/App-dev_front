@@ -3,9 +3,9 @@
 
   <ion-img src="../../../assets/img/ativo1.png" class="icone"></ion-img>
   <h5 class="texto">BUILDING OF THE DAY</h5><br><br>
- <ion-input  type="email"  placeholder="E-mail"   clearOnEdit="false"  class="button" margin= 40px >
+ <ion-input  type="email" [(ngModel)]="user.email" placeholder="E-mail"   clearOnEdit="false"  class="button" margin= 40px >
  </ion-input>
- <ion-input type="password" placeholder="Senha"  clearOnEdit="false" class="button" margin= 40px >
+ <ion-input type="password" placeholder="Senha" [(ngModel)]="user.password" clearOnEdit="false" class="button" margin= 40px >
 </ion-input>
  <br><br> 
  <ion-grid>

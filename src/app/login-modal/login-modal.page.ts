@@ -15,13 +15,8 @@ export class LoginModalPage implements OnInit {
     password:'',
     name: '',
    ocupation: '',
-   telephone:''
  };
   constructor(private modalCtrl: ModalController, public formBuilder: FormBuilder, private cardservice: Cardservice, private navCtrl: NavController) { 
-    this.loginForm = this.formBuilder.group({
-      email    : ["test", Validators.compose([Validators.required])],
-      password : ["test", Validators.compose([Validators.required])]
-    })
   } 
 
   ngOnInit() {
@@ -29,9 +24,7 @@ export class LoginModalPage implements OnInit {
   
   login() {
     this.cardservice.login(this.user)
-    .subscribe(() => this.modalCtrl.dismiss());
-
-    
+    .subscribe(() => this.navCtrl.navigateForward ('/donate') && this.closeModal());
   }
 
   async closeModal() {

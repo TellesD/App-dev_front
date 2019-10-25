@@ -9,7 +9,8 @@ export class CardModule {
      providers: string;
      style: any;
      subjects: any;
-     like: string;
+     status: any;
+     like: any;
     
 
 }

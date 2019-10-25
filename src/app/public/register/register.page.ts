@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NavController, AlertController } from '@ionic/angular';
 import { UserModule } from '../../module/user.module';
-import { Cardservice } from 'src/app/services/cards.service';
+import { Cardservice } from '../../services/cards.service';
 @Component({
   selector: 'app-register',
   templateUrl: './register.page.html',
@@ -13,7 +13,6 @@ export class RegisterPage implements OnInit {
        password:'',
        name: '',
       ocupation: '',
-      telephone:''
     };
   
 
@@ -24,8 +23,7 @@ export class RegisterPage implements OnInit {
   open(pagina: string) {
     this.navCtrl.navigateForward(pagina);
   }
-  add()
-  {
+  add(){
    this.cardService.addUser(this.user)
   .subscribe(() => this.navCtrl.back());
   }

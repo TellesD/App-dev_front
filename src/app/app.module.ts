@@ -16,6 +16,7 @@ import { LoginModalPageModule } from './login-modal/login-modal.module';
 import { CardModalPageModule } from './card-modal/card-modal.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { PayPal } from '@ionic-native/paypal/ngx';
+import { NativeStorage } from '@ionic-native/native-storage/ngx';
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
@@ -35,6 +36,7 @@ import { PayPal } from '@ionic-native/paypal/ngx';
   providers: [
     StatusBar,
     SplashScreen,
+    NativeStorage,
     PayPal,
     ImagePicker,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },

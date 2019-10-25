@@ -8,5 +8,44 @@
 
 
 <ion-content>
+  <ion-card  *ngFor="let card of cards" class="card" >
+    
+    <img (click)="openModal()" src="../../assets/img/angela-compagnone-Vcp9fT8nCBE-unsplash.jpg" class="imagem">
+    
+       <ion-icon (click)="openModal()" class="tabela" name="add-circle"></ion-icon>
+   
+    <ion-card-content class="cartao">
+           <ion-grid>
+           <ion-row>
+             <ion-col>
+            <p class="cidade"> {{card.style}} </p>
+          </ion-col>
+          <ion-col offset="5" >
+              <p class="ano"> {{card.year}} </p>
+            </ion-col>
+          </ion-row>
+          </ion-grid>
+           <p class="itens1">{{card.providers}}</p>
+             
+          <ion-grid margin-top>
+            <ion-row >
+              <ion-col offset="2">
+              
+                <app-like (click)="like(card._id)" ></app-like>
+                  <ion-badge class="like" >{{card.like}}</ion-badge>
+                
+           </ion-col>
+           <ion-col offset="4" >
+            <ion-icon name="share" class="icone2"></ion-icon>
+             </ion-col>
+           </ion-row>
+           </ion-grid> 
+         
             
+  
+    
+    
+    </ion-card-content>
+
+  </ion-card>
 </ion-content>
