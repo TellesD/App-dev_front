@@ -1,0 +1,114 @@
+
+ion-content {
+
+  --background: linear-gradient(0deg, rgb(106,251,211) 25%, rgb(100,209,226) 50%, rgba(100,179,241) 75%, rgb(101,153,247) 100%) !important;
+ background-size: cover ;
+
+}
+ion-toolbar {
+  --background: rgb(101,153,247);
+  --ion-color-base: transparent !important;
+  box-shadow: none  
+  
+}
+
+.pesquisa{
+  --cancel-button-color: white !important;
+  --clear-button-color: white !important;
+  --icon-color: white !important;
+  --placeholder-color: white !important;
+  --color: white !important;
+  
+}
+.card{
+  margin-top: -2px;
+  margin-bottom: 15px;
+  width: 320px;
+  height: 435px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+
+
+}
+.icon{
+  margin-top: 10px;
+  margin-right: 10px;
+  height: 50px;
+  width: 50px;
+}
+.icone1{
+  color: #ff4848;
+  width: 21px !important;
+  height: 21px  !important;
+}
+.icone2{
+  color: #659ffb;
+  width: 21px;
+  height: 21px;
+
+}
+
+.cidade{
+  font-family: Arial;
+  font-size: 16px;
+  
+  font-stretch: expanded;
+  color: black;
+} 
+.itens1{
+  
+    font-family: Arial;
+    font-size: 14px;
+    
+    font-stretch: expanded;
+    color: #262626;
+    margin-left: 12px;
+  
+} 
+.itens2{
+  
+  font-family: Arial;
+  font-size: 11px;
+  
+  font-stretch: expanded;
+  color: #959595;
+  margin-left: 12px;
+
+} 
+.button-menu{
+    margin-top: 15px;
+  
+}
+.imagem{
+  width: 320px;
+  height: 275px;
+}
+.ano{
+  font-family: Arial;
+  font-size: 16px;
+  font-variant-caps: titling-caps;
+  font-stretch: expanded;
+  color: black;
+}
+.tabela{
+  margin-left: 280px;
+  margin-top: -265px;
+  position: absolute !important;
+  width: 20px;
+  height: 20px;
+  color: #659ffb;
+}
+.like{
+  --background: transparent;
+  --color: #ff4848;
+}
+.share{
+  --background: transparent;
+  --color: #659ffb;
+}
+app-animated-like{
+  color: red;
+  height: 10px !important;
+  width: 10px !important; 
+}

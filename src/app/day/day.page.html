@@ -1,0 +1,75 @@
+
+
+
+<ion-content  [scrollEvents]="true" >
+  
+  <ion-grid class="grid" cards>
+ <ion-row >
+   <ion-col >
+     <ion-menu-button color="light"></ion-menu-button>
+   </ion-col>
+   <ion-col>
+  <ion-icon (click)="ScrollToTop()" src="../../assets/img/Icone.svg" class="icone"></ion-icon>
+</ion-col>
+</ion-row>
+<ion-row>
+  <ion-col >
+      <app-animated-like class="Like"></app-animated-like>
+  </ion-col > 
+</ion-row>
+<ion-row>
+  <ion-col>
+    <p class="nome">{{cards.providers}} </p>
+  </ion-col>
+</ion-row>
+<ion-row>
+    <ion-col>
+        <p class="city">{{cards.style}}</p>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+        <p class="fotografo">-Photo By {{cards.photographer}}</p>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <ion-button class="butao1">{{cards.subjects[0]}}</ion-button>
+    </ion-col>
+    <ion-col>
+      <ion-button class="butao" >{{cards.subjects[1]}}</ion-button>
+  </ion-col>
+  <ion-col>
+   <ion-button class="butao">{{cards.subjects[2]}}</ion-button>
+</ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col>
+      <ion-button class="barra" (click)="ScrollToPoint()" ></ion-button>
+   </ion-col>
+  </ion-row>
+  </ion-grid>
+
+  <img src="../../assets/img/angela-compagnone-Vcp9fT8nCBE-unsplash.jpg" class="image">
+  <p class="fotografo2">-Photo By {{cards.photographer}} </p>
+  <p class="fotografo2">-Text From {{cards.textW}}</p>
+
+
+  <ion-grid>
+      <ion-row >
+          <ion-col offset="2">
+          
+            <ion-icon name="heart" class="icone1"></ion-icon>
+              <ion-badge class="like">{{cards.like}}</ion-badge>
+           
+       </ion-col>
+       <ion-col offset="2" >
+        <ion-icon name="share" class="icone2"></ion-icon>
+         </ion-col>
+       </ion-row> 
+  </ion-grid>
+  
+  <p class="texto">{{cards.description}}
+  </p>
+
+</ion-content>

@@ -1,0 +1,410 @@
+$bubble-d: 4.5rem; // bubble diameter
+$bubble-r: .5*$bubble-d; // bubble-radius
+
+@mixin bubble($ext) {
+  transform: scale(1);
+  border-color: #cc8ef5;
+  border-width: $ext;
+}
+
+ion-content {
+  --background: linear-gradient(0deg, rgb(106,251,211) 25%, rgb(100,209,226) 50%, rgba(100,179,241) 75%, rgb(101,153,247) 100%) !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  
+  }
+  ion-toolbar {
+    --ion-color-base: transparent !important;
+    box-shadow: none  
+  }
+
+  .Like{
+    margin-left: 6px
+  }
+  
+  .image{
+    height: 100% !important;
+    width: 100%;
+    object-fit: cover !important;
+    
+  }
+  .icone{
+  width: 50px; 
+  height: 50px;
+  position: fixed;
+  right: 10px; 
+  top: 10px;
+  z-index: 1;  }
+  
+  .grid{
+    position: absolute;
+  }
+  @media only screen and (min-height: 560px) {
+    .nome{
+      font-family: Arial;
+      font-size: 40px;
+      color: white;
+      position: absolute;
+      margin-top: 230px;
+      margin-left: 30px
+    }
+    .city{
+      font-family: Arial;
+      font-size: 40px;
+      color: white;
+      margin-top: 310px;
+      margin-left: 30px
+    }
+
+    .fotografo{
+      font-size: 13px;
+      font-family: Arial;
+      color: #f5f5f5;
+      margin-left: 30px;
+      margin-top: -40px;
+      text-decoration: underline
+   }
+  
+    
+    .butao1{
+      width: 80px;
+      height: 28px;
+      margin-top: -30px; 
+      --border-radius: 30px;
+      --background: #EBEBEB !important;
+    }
+  
+    .butao{
+      width: 80px;
+      height: 28px;
+      margin-top: -30px; 
+      --border-radius: 30px;
+      --background: #EBEBEB !important;
+    }
+    
+    .barra{
+      height: 5px;
+      width: 134px;
+      --background: white;
+      margin-left: 80px;
+      margin-top: -10px;
+      border-radius: 30px;
+    }
+  } 
+  @media only screen and (min-height: 640px) {
+    .nome{
+      font-family: Arial;
+      font-size: 40px;
+      color: white;
+      position: absolute;
+      margin-top: 230px;
+      margin-left: 30px
+    }
+    .city{
+      font-family: Arial;
+      font-size: 40px;
+      color: white;
+      margin-top: 310px;
+      margin-left: 30px
+    }
+
+    .fotografo{
+      font-size: 13px;
+      font-family: Arial;
+      color: #f5f5f5;
+      margin-left: 30px;
+      margin-top: -40px;
+      text-decoration: underline
+   }
+  
+    
+    .butao1{
+      width: 90px;
+      height: 28px;
+      margin-top: -30px; 
+      margin-left: 25px;
+      --border-radius: 30px;
+      --background: #EBEBEB !important;
+    }
+  
+    .butao{
+      width: 90px;
+      height: 28px;
+      margin-top: -30px; 
+      --border-radius: 30px;
+      --background: #EBEBEB !important;
+    }
+    
+    .barra{
+      height: 5px;
+      width: 134px;
+      --background: white;
+      margin-left: 110px;
+      margin-top: 40px;
+      border-radius: 30px;
+    }
+  } 
+  @media only screen and (min-height: 730px) {
+    .nome{
+      font-family: Arial;
+      font-size: 40px;
+      color: white;
+      position: absolute;
+      margin-top: 400px;
+      margin-left: 30px
+    }
+    .city{
+      font-family: Arial;
+      font-size: 40px;
+      color: white;
+      margin-top: 440px;
+      margin-left: 30px
+    }
+
+    .fotografo{
+      font-size: 13px;
+      font-family: Arial;
+      color: #f5f5f5;
+      margin-left: 30px;
+      margin-top: -40px;
+      text-decoration: underline
+   }
+  
+    
+    .butao1{
+      width: 90px;
+      height: 28px;
+      margin-top: -30px; 
+      margin-left: 50px;
+      --border-radius: 30px;
+      --background: #EBEBEB !important;
+    }
+  
+    .butao{
+      width: 90px;
+      height: 28px;
+      margin-top: -30px; 
+      --border-radius: 30px;
+      --background: #EBEBEB !important;
+    }
+    
+    .barra{
+      height: 5px;
+      width: 134px;
+      --background: white;
+      margin-left: 130px;
+      margin-top: 20px;
+      border-radius: 30px;
+    }
+  } 
+  @media only screen and (min-height: 810px) {
+    .nome{
+      font-family: Arial;
+      font-size: 40px;
+      color: white;
+      position: absolute;
+      margin-top: 460px;
+      margin-left: 30px
+    }
+    .city{
+      font-family: Arial;
+      font-size: 40px;
+      color: white;
+      margin-top: 540px;
+      margin-left: 30px
+    }
+    .fotografo{
+      font-size: 13px;
+      font-family: Arial;
+      color: #f5f5f5;
+      margin-left: 30px;
+      margin-top: -40px;
+      text-decoration: underline
+   }
+     
+   .butao1{
+    width: 90px;
+    height: 28px;
+    margin-top: -30px;
+    margin-left: 30px; 
+    --border-radius: 30px;
+    --background: #EBEBEB !important;
+  }
+
+  .butao{
+    width: 90px;
+    height: 28px;
+    margin-top: -30px; 
+    --border-radius: 30px;
+    --background: #EBEBEB !important;
+  }
+  
+  .barra{
+    height: 5px;
+    width: 134px;
+    --background: white;
+    margin-left: 110px;
+    margin-top: -10px;
+    border-radius: 30px;
+  }
+  } 
+
+  .tag{
+    color: #fff;
+  }
+  .texto{
+    color: white;
+    white-space: normal; 
+    margin-left: 30px;
+    margin-right: 30px;
+   
+  }
+  .fotografo2{
+    font-size: 13px;
+    font-family: Arial;
+    color: #f5f5f5;
+    margin-left: 30px;
+    text-decoration: underline
+ }
+.like{
+  --background: transparent;
+  --color: #ff4848;
+}
+.share{
+  --background: transparent;
+  --color: white;
+}
+.icone1{
+  color: #ff4848;
+  width: 21px !important;
+  height: 21px  !important;
+}
+.icone2{
+  color: white;
+  width: 21px;
+  height: 21px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ /* 
+ heart beat:
+
+ #heart {
+    color: #ff4848;
+    width: 40px;
+    height: 40px;
+    animation: heartbeat 1s infinite;
+    margin:0 auto
+}
+#heart:before,
+#heart:after {
+    position: absolute;
+    content: "";
+    left: 50px;
+    top: 0;
+    width: 50px;
+    height: 80px;
+    background: #ff4848;
+    -moz-border-radius: 50px 50px 0 0;
+    border-radius: 50px 50px 0 0;
+    -webkit-transform: rotate(-45deg);
+       -moz-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+         -o-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    -webkit-transform-origin: 0 100%;
+       -moz-transform-origin: 0 100%;
+        -ms-transform-origin: 0 100%;
+         -o-transform-origin: 0 100%;
+            transform-origin: 0 100%;
+}
+#heart:after {
+    left: 0;
+    -webkit-transform: rotate(45deg);
+       -moz-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+         -o-transform: rotate(45deg);
+            transform: rotate(45deg);
+    -webkit-transform-origin: 100% 100%;
+       -moz-transform-origin: 100% 100%;
+        -ms-transform-origin: 100% 100%;
+         -o-transform-origin: 100% 100%;
+            transform-origin :100% 100%;
+}
+
+
+
+  
+  @keyframes heartbeat
+  {
+    0%
+    {
+      transform: scale( .75 );
+    }40px;
+    height: 40
+    240px;
+    height: 40
+    {40px;
+    height: 40
+     40px;
+    height: 40
+    }40px;
+    height: 40
+    440px;
+    height: 40
+    {40px;
+    height: 40
+     40px;
+    height: 40;
+    }40px;
+    height: 40
+    640px;
+    height: 40
+    {40px;
+    height: 40
+     40px;
+    height: 40
+    }40px;
+    height: 40
+    840px;
+    height: 40
+    {40px;
+    height: 40
+      transform: scale( .75 );
+    }
+    100%
+    {
+      transform: scale( .75 );
+    }
+  }*/

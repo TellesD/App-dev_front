@@ -1,0 +1,55 @@
+ion-content {
+
+  --background: linear-gradient(0deg, rgb(106,251,211) 25%, rgb(100,209,226) 50%, rgba(100,179,241) 75%, rgb(101,153,247) 100%) !important;
+ background-size: cover ;
+
+}
+ion-toolbar {
+  --background: rgb(101,153,247);
+  --ion-color-base: transparent !important;
+  box-shadow: none  
+  
+}
+  .cartao{
+    background-color: azure;
+  }
+  .pesquisa{
+    border: 1px solid white;
+    width: 322px;
+    height: 38px;
+    border-radius: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center
+  }
+  .card{
+    margin-bottom: 40px;
+    width: 326px;
+    height: 275px;
+    margin-left: auto;
+    margin-right: auto;
+  
+  }
+  .icon{
+    width: 26px;
+    height: 26px;
+  }
+  .icon2{
+    width: 37px;
+    height: 37px;
+    margin-left: 250px;
+    margin-bottom: -30px;
+  }
+  .icon3{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+  }
+  .itens{
+    position: absolute;
+    margin-top: -20px;
+    color: #BF5EFC 
+  } 
+  .itens2{
+    color: #BE5CFC
+  } 

@@ -1,0 +1,78 @@
+.caixa{
+   height: 150px;
+}
+
+
+ion-content {
+  --background: linear-gradient(0deg, rgb(106,251,211) 25%, rgb(100,209,226) 50%, rgba(100,179,241) 75%, rgb(101,153,247) 100%) !important;
+   background-size: cover ;
+ 
+ }
+ .icon{
+   width: 26px;
+   height: 26px;
+ }
+ .botao2{
+  --background: transparent;
+  border: 1px solid white;
+  width: 95%;
+  height: 60px;
+  margin-left: 10px;
+  box-shadow: none;
+  color: aliceblue
+  }
+ .botao{
+   --background: transparent;
+   border: 1px solid white;
+   width: 100px;
+   height: 40px;
+   color:rgb(179, 239, 239);
+   box-shadow: none;
+   
+   }
+   ion-toolbar {
+    --background: rgb(101,153,247);
+    --ion-color-base: transparent !important;
+    box-shadow: none  
+    }
+   .texto{
+      color: aliceblue
+     }
+     .campos{
+      --background: transparent;
+       border: 1px solid white;
+       
+       text-align: end;
+       color: white;
+       
+  
+  }
+  .area{
+   --background: transparent;
+    border: 1px solid white;
+    height: 80px;
+  
+    text-align: end;
+    color: white;
+
+}
+.botao1{
+  --background: transparent;
+  border: 1px solid white;
+  width: 251px;
+  height: 57px;
+ 
+  box-shadow: none;
+  }
+  .add{
+    font-size: 12px;
+    margin-left: 250px;
+    margin-top: 50px;
+  }
+.icone{
+  position: absolute;
+  width:  40px;
+  height: 40px;
+
+  
+}

@@ -1,0 +1,83 @@
+<ion-toolbar>
+  <ion-buttons slot="start">
+    <ion-menu-button color= "light"></ion-menu-button>
+  </ion-buttons>
+  <ion-icon  src="../../assets/icon/earpods.svg" slot="end"  class="icon"></ion-icon>
+
+</ion-toolbar>
+
+<ion-content >
+ <br><br>
+
+
+      <ion-button class="botao2">
+          <ion-icon (click)="getImages()" name="cloud-upload" class="icone"></ion-icon>
+        <p class="add">*ADD PHOTO</p>
+       
+      </ion-button>
+      <!--ion-button class="botao2">
+          <ion-icon (click)="getPlans()" name="cloud-upload" class="icone"></ion-icon>
+        <p class="add">ADD PLANS</p>
+       
+      </ion-button-->
+  
+  <ion-grid>
+    <ion-row>
+      <ion-col >
+        <ion-input type="text" placeholder="PROJECT NAME" class="campos" [(ngModel)]="cardsp.providers"></ion-input>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+      <ion-textarea placeholder="DESCRIBE PROJECT"  class="area"  [(ngModel)]="cardsp.description"></ion-textarea>
+    </ion-col>  
+    </ion-row>
+    <ion-row>
+      <ion-col>
+      
+        <ion-input type="number"   placeholder="*YEAR" class="campos" [(ngModel)]="cardsp.year"></ion-input>
+    
+      </ion-col>
+      <ion-col size="8">
+        <ion-input type="text" placeholder="*CITY" class="campos" [(ngModel)]="cardsp.style"></ion-input>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-input type="text" placeholder="*ARCHTECT" class="campos" [(ngModel)]="cardsp.arch" ></ion-input>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-input type="text" placeholder="*PHOTOGRAPH" class="campos" [(ngModel)]="cardsp.photographer"></ion-input>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+      
+ 
+    
+        <ion-input type="number" placeholder="*SIZE m²" class="campos" [(ngModel)]="cardsp.size"></ion-input>
+        
+    
+      </ion-col>
+      <ion-col size="8">
+
+          <ion-select [(ngModel)]="cardsp.subjects" class="campos" okText="Okay" placeholder="*MATERIALS"  multiple="true" cancelText="Dismiss">
+              <ion-select-option *ngFor="let m of materials" value={{m.material}}>{{m.material}}</ion-select-option>
+                  </ion-select>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="8" offset="2"><br>
+   <ion-button class="botao1" (click)="add()" > 
+        
+      UPLOAD
+    </ion-button>
+  </ion-col>
+  </ion-row>
+  </ion-grid>
+
+
+
+</ion-content>
